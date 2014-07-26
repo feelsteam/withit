@@ -9,12 +9,12 @@
 <script type="text/javascript">
 	function doSubmit() {
 
-		if (boardFrm.title.value == "") {
+		if (boardFrm.userid.value == "") {
 
 			alert("제목을 입력해주세요.");
 			return;
 		}
-		if (boardFrm.content.value == "") {
+		if (boardFrm.userpwd.value == "") {
 			alert("내용을입력해주세요.");
 			return;
 		}
@@ -24,12 +24,15 @@
 </head>
 <body bgcolor="#323B55">
 
-	<form id="boardFrm" action="writeProc2.do" method="post">
+	<form id="boardFrm" action="writeProc.do" method="post">
 
-		<label for="username">username</label><input type="text" name="title"
+		<label for="username">username</label><input type="text" name="userid"
 			class="placeholder" placeholder="me@tutsplus.com"></br> <label
-			for="password">password</label><input type="password" name="content"
+			for="password">password</label><input type="password" name="userpwd"
 			class="placeholder" placeholder="password">
+			 <input
+			type="submit" value="회원가입" onclick="doSubmit()">
 	</form>
+	
 </body>
 </html>

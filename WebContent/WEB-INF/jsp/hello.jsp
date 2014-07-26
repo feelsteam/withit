@@ -1,3 +1,3 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-力格:${title}
+力格:${userid}

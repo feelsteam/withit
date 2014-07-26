@@ -21,8 +21,8 @@
 					for(i=0;i<list.length; i++){
 						content +="<tr>";
 						content +="<td>"+list[i].no +"</td>";
-						content +="<td>"+list[i].title +"</td>";
-						content +="<td>"+list[i].content +"</td>";
+						content +="<td>"+list[i].userid +"</td>";
+						content +="<td>"+list[i].userpwd +"</td>";
 						content +="</tr>";
 						
 						content +="<table>";

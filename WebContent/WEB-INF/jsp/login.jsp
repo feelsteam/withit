@@ -1,42 +1,40 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<html>
 <head>
-<meta charset="utf-8">
-<title>Slick Login</title>
-<meta name="description" content="boardFrm">
-<meta name="author" content="Webdesigntuts+">
-<link rel="stylesheet" type="text/css" href="style.css" />
-<script type="text/javascript"
-	src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
-<script type="text/javascript" src="/springboard/js/placeholder.js"
-	charset="utf-8"></script>
+	<title> SringBoard</title>
+	<script type="text/javascript"> 
+		function doLogin() {
+			if(frm.j_username.value == "") {
+				alert("아이디를 입력해주세요.");
+				return;
+			}
+			if(frm.j_password.value == "") {
+				alert("패스워드를 입력해주세요.");
+				return;
+			}
+			
+			frm.submit();
+		}
+		
+	</script>	
 </head>
-<script type="text/javascript">
-	function doSubmit() {
-
-		if (boardFrm.title.value == "") {
-
-			alert("제목을 입력해주세요.");
-			return;
-		}
-		if (boardFrm.content.value == "") {
-			alert("내용을입력해주세요.");
-			return;
-		}
-		boardFrm.submit()
-	}
-</script>
 <body>
+<table>
+<form name="frm" action="j_spring_security_check" method="post">
+<tr>
+	<td> 아이디</td>
+	<td> <input type="text" name="j_username"> </td>
+</tr>
+<tr>
+	<td> 패스워드</td>
+	<td> <input type="text"  name="j_password"> </td>
+</tr>
+<tr>
+	<td colspan="2" align="center"><input type="button" value="로그인" onclick="doLogin()"></td>
+</tr>
+</form>
+</table>
 
-	<form id="boardFrm" action="writeProc2.do" method="post">
-
-		<label for="username">username</label><input type="text" name="title"
-			class="placeholder" placeholder="me@tutsplus.com"> <label
-			for="password">password</label><input type="password" name="content"
-			class="placeholder" placeholder="password"> <input
-			type="submit" value="회원가입" onclick="doSubmit()">
-	</form>
 </body>
 </html>

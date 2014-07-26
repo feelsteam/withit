@@ -8,12 +8,12 @@
 <script type="text/javascript">
 	function doSubmit() {
 
-		if (boardFrm.title.value == "") {
+		if (boardFrm.userid.value == "") {
 
 			alert("제목을 입력해주세요.");
 			return;
 		}
-		if (boardFrm.content.value == "") {
+		if (boardFrm.userpwd.value == "") {
 			alert("내용을입력해주세요.");
 			return;
 		}
@@ -27,11 +27,11 @@
 			<td height="30" width="10%" bgcolor="#dddddd" align="center">제목
 			</td>
 			<td align="left" height="30"><input type="text" size="80"
-				maxLength="150" name="title" id=title></td>
+				maxLength="150" name="userid" id=userid></td>
 		</tr>
 		<tr>
 			<td height="30" bgcolor="#dddddd" align="center">내용</td>
-			<td><textarea cols="60" rows="15" name="content" id=content></textarea><br />
+			<td><textarea cols="60" rows="15" name="userpwd" id=userpwd></textarea><br />
 				<br /></td>
 		</tr>
 		<tr>

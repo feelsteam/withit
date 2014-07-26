@@ -13,8 +13,8 @@
 
 			<tr>
 				<td>${result.no}</td>
-				<td>${result.title}</td>
-				<td>${result.content}</td>
+				<td>${result.userid}</td>
+				<td>${result.userpwd}</td>
 			</tr>
 		</c:forEach>
 

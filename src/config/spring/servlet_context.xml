@@ -16,7 +16,7 @@
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 	
-	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- Enables the Spring MVC @C5ontroller programming model -->
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
 			<bean class = "org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
