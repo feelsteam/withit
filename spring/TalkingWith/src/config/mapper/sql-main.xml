@@ -8,4 +8,26 @@
 	  select now()
 	</select>
 	
+	<insert id="writeProc"  parameterType="java.util.Map">
+	 	insert into springboard(userid,userpwd) values(#{userid},#{userpwd})
+	</insert>
+	
+	<insert id="writeProc2"  parameterType="spring.board.vo.Board">
+	 	insert into springboard(userid,userpwd) values(#{userid},#{userpwd})
+	</insert>
+	
+	<select id="getList" parameterType="java.util.Map" resultType="java.util.HashMap">
+	  select userid,userpwd from springboard
+	</select>	
+	
+	<select id="getUserPwd" parameterType="java.lang.String" resultType="java.lang.String">
+	  select userpwd from springmember where userid = #{userid}
+	</select>	
+	
 </mapper>
+
+
+
+
+
+
